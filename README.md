@@ -15,7 +15,7 @@ Portfolio website pribadi yang menampilkan fokus saya di bidang **Network Engine
 Tambahkan URL deployment Anda di sini:
 
 ```txt
-https://your-domain.vercel.app
+https://portofolio-db.vercel.app
 ```
 
 ## Tentang Project
