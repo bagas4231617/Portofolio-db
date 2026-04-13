@@ -37,11 +37,9 @@ Website ini dibuat untuk:
 
 ## Screenshot
 
-Tambahkan screenshot hasil website Anda di folder repo atau pakai URL publik:
-
 ```md
-![Portfolio Preview](./docs/preview-home.png)
-```
+!<img width="1366" height="683" alt="image" src="https://github.com/user-attachments/assets/1ab30ae6-c83e-4b7c-946b-455cbd602e99" />
+
 
 Contoh section yang bisa Anda tampilkan:
 - tampilan homepage
