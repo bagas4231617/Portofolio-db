@@ -14,12 +14,12 @@ export const TypingText: React.FC<TypingTextProps> = ({ text, delay = 100, bootS
   const [currentBootIndex, setCurrentBootIndex] = useState(0);
 
   const serverBootSequence = [
-    '[ OK ] Starting Network Manager...',
-    '[ OK ] Establishing secure connection...',
-    '[ OK ] Loading kernel modules...',
-    '[ OK ] Mounting file systems...',
-    '[ OK ] Starting system services...',
-    '[ OK ] Fetching profile data...'
+    '[ OK ] Memulai Network Manager...',
+    '[ OK ] Membangun koneksi aman...',
+    '[ OK ] Memuat modul kernel...',
+    '[ OK ] Memasang sistem file...',
+    '[ OK ] Memulai layanan sistem...',
+    '[ OK ] Mengambil data profil...'
   ];
 
   useEffect(() => {
@@ -51,12 +51,12 @@ export const TypingText: React.FC<TypingTextProps> = ({ text, delay = 100, bootS
     return (
       <div className="font-mono text-sm">
         {bootMessages.map((message, idx) => (
-          <div key={idx} className="text-green-400 mb-1">
+          <div key={idx} className="text-cyan-400 mb-1">
             {message}
           </div>
         ))}
         {currentBootIndex < serverBootSequence.length && (
-          <span className="animate-pulse text-green-400">_</span>
+          <span className="animate-pulse text-cyan-400">_</span>
         )}
       </div>
     );
@@ -67,7 +67,7 @@ export const TypingText: React.FC<TypingTextProps> = ({ text, delay = 100, bootS
       {bootSequence && bootMessages.length > 0 && (
         <div className="mb-2">
           {bootMessages.map((message, idx) => (
-            <div key={idx} className="text-green-400 text-xs mb-1 opacity-60">
+            <div key={idx} className="text-cyan-400 text-xs mb-1 opacity-60">
               {message}
             </div>
           ))}

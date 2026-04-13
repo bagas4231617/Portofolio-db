@@ -1,20 +1,52 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Professional Portfolio - Network & Cloud Engineer
 
-# Run and deploy your AI Studio app
+A modern, high-performance portfolio website built to showcase expertise in Network Engineering, Cloud Infrastructure, and System Administration. The visual identity is inspired by next-generation observability dashboards, network topologies, and datacenter control planes.
 
-This contains everything you need to run your app locally.
+## Tech Stack
 
-View your app in AI Studio: https://ai.studio/apps/2da350eb-23c6-4407-93b7-e3077411b1c4
+This project is built with modern frontend technologies focusing on speed, responsiveness, and developer experience:
 
-## Run Locally
+- **Framework**: React 19
+- **Build Tool**: Vite
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS v4
+- **Animations**: Motion (Framer Motion)
+- **Icons**: Lucide React
 
-**Prerequisites:**  Node.js
+## Features
 
+- **Modern Architecture Aesthetic**: Slate, blue, and cyan color palette mimicking professional cloud consoles and network dashboards.
+- **Topological Animations**: Custom CSS and Framer Motion orchestrating subtle, hardware-feel animations (pulsing LEDs, data lines).
+- **Fully Responsive**: Adapts seamlessly to all screen sizes, from mobile devices to ultrawide monitors.
+- **Contact Handling**: Built-in hook to integrate easily with Formspree for handling incoming messages.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Running Locally
+
+**Prerequisites:** 
+- Node.js (v18+ recommended)
+- npm or yarn or pnpm
+
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+2. **Configure Environment:**
+   If needed, copy `.env.example` to `.env.local` and set any required API endpoints (e.g., Formspree).
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+
+## Customization
+
+You can personalize the portfolio by editing the data in `src/data/portfolioData.ts`. This single source of truth powers the Hero, Timeline, Certificates, and Projects sections.
+
+---
+Built with code and care.

@@ -5,12 +5,12 @@ export const TerminalLoader: React.FC = () => {
   return (
     <div className="flex items-center justify-center min-h-[200px] bg-slate-950">
       <motion.div
-        className="font-mono text-green-400 text-lg"
+        className="font-mono text-cyan-400 text-lg"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
       >
-        <span>[ Loading modules...</span>
+        <span>[ Memuat modul...</span>
         <motion.span
           className="inline-block"
           animate={{ opacity: [1, 0, 1] }}

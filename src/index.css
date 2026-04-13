@@ -1,47 +1,31 @@
 @import "tailwindcss";
 
-/* PERBAIKAN: Format tema Tailwind v4 */
 @theme {
-  --font-sans: 'Inter', sans-serif;
+  --color-slate-850: #141b2d;
+  --color-slate-900: #0f172a;
+  --color-slate-950: #020617;
+  
+  --color-brand-cyan: #06b6d4;
+  --color-brand-blue: #3b82f6;
+  --color-brand-indigo: #6366f1;
+
+  --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 }
 
-/* Custom Animations - Kompleks */
-@keyframes pulse {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.7);
-  }
-
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 6px rgba(74, 222, 128, 0);
-  }
-
-  100% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 rgba(74, 222, 128, 0);
-  }
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.4; }
 }
 
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-@keyframes blinking-cursor {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
 }
 
 /* Base Element Styles */
@@ -50,23 +34,69 @@ html {
 }
 
 body {
-  background-color: rgb(3, 7, 18);
+  background-color: var(--color-slate-950);
+  background-image: 
+    radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 85% 30%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
   color: white;
+  min-height: 100vh;
 }
 
-a {
-  transition-property: color;
+/* Custom Scrollbar - Webkit & Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.5) rgba(15, 23, 42, 0.8);
 }
 
-/* Font Families */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.8);
+}
+
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(59, 130, 246, 0.4) transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(59, 130, 246, 0.4);
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.7);
+}
+
+/* Base Typography Configuration */
 @layer base {
   :root {
-    --font-sans: 'Inter', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
   }
 }
 
-/* Utility Classes */
 .font-mono {
   font-family: var(--font-mono);
 }
@@ -75,54 +105,22 @@ a {
   font-family: var(--font-sans);
 }
 
-/* Custom Hexagon Styles (untuk Avatar) */
-.hex-polygon {
-  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+/* Node Background Grid Detail */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+/* Subtle Topology Animation elements */
+.topology-line {
+  stroke-dasharray: 100;
+  animation: dash 10s linear infinite;
 }
 
-::-webkit-scrollbar-track {
-  background: rgba(15, 23, 42, 0.5);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(74, 222, 128, 0.3);
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(74, 222, 128, 0.5);
-}
-
-/* Smooth Transitions */
-* {
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* CRT Scanline Effect for Dark Mode */
-.dark::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 2px,
-    rgba(74, 222, 128, 0.03) 2px,
-    rgba(74, 222, 128, 0.03) 4px
-  );
-  pointer-events: none;
-  z-index: 1;
-}
-
-/* Disable Transitions for Specific Properties During Animation */
-.no-transition * {
-  transition: none !important;
+@keyframes dash {
+  to {
+    stroke-dashoffset: -200;
+  }
 }

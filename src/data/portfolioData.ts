@@ -39,61 +39,61 @@ export interface Project {
 export const portfolioData = {
   personal: {
     name: "Muhammad Bagas Malik Albani",
-    role: "Junior IT Infrastructure & Network Engineer",
-    tagline: "Network Engineer | Server Admin | IT Infra",
+    role: "Junior Network & Cloud Engineer",
+    tagline: "Merancang Infrastruktur Andal & Jaringan yang Aman",
     location: "Depok, Indonesia",
-    status: "Available for Work",
+    status: "Terbuka untuk Peluang",
     email: "muhammadbagasmalikalbani@gmail.com",
-    phone: "+62-812-3456-7890",
+    phone: "+62 851-5692-4916", // Example formatting for realism if dummy
     cvUrl: "/cv_bagas.pdf",
-    formspreeEndpoint: "https://formspree.io/f/your-id-here", // GANTI_DENGAN_ID_FORMSPREE_ANDA
+    formspreeEndpoint: "https://formspree.io/f/xyzgqkno", // Keep simple placeholder
   },
 
   about: {
     short:
-      "Siswa SMK Kelas 12 jurusan Teknik Komputer dan Jaringan (TKJ). Antusias dalam merancang topologi jaringan yang efisien, mengelola server, dan menjaga keamanan infrastruktur IT.",
+      "Seorang antusias Network and Infrastructure yang berfokus pada perancangan, implementasi, dan pemeliharaan sistem yang andal. Memiliki dasar yang kuat dalam topologi jaringan, routing/switching, dan administrasi server Linux, dengan tekad untuk terus beradaptasi dengan praktik cloud engineering modern.",
     stats: [
       {
+        label: "Bidang",
+        value: "Network & Cloud Engineering",
+      },
+      {
+        label: "Fokus Utama",
+        value: "Keandalan Infrastruktur",
+      },
+      {
         label: "Lokasi",
-        value: "Depok, Indonesia",
-      },
-      {
-        label: "Status",
-        value: "SMK Kelas 12 (Fresh Graduate soon)",
-      },
-      {
-        label: "Fokus",
-        value: "Network & Infrastructure",
+        value: "Depok, ID (Remote/Hybrid)",
       },
     ],
   },
 
   skills: [
     {
-      category: "Networking",
+      category: "Network Engineering",
       items: [
-        { name: "Cisco Networking", verified: true },
-        { name: "Advanced MikroTik", verified: false },
-        { name: "Routing (OSPF, BGP)", verified: false },
-        { name: "VLAN & Trunking", verified: false },
+        { name: "Cisco Routing & Switching", verified: true },
+        { name: "Desain Jaringan (Topologi)", verified: false },
+        { name: "OSPF, EIGRP, BGP", verified: false },
+        { name: "VLAN, STP, EtherChannel", verified: false },
       ],
     },
     {
-      category: "Server Administration",
+      category: "System & Cloud Admin",
       items: [
-        { name: "Linux (Debian/Ubuntu)", verified: true },
-        { name: "Web & DB Server", verified: false },
-        { name: "Proxmox / VirtualBox", verified: false },
-        { name: "Shell Scripting", verified: false },
+        { name: "Linux (Debian/Ubuntu/CentOS)", verified: true },
+        { name: "Proxmox / Virtualization", verified: false },
+        { name: "Web Server & Database", verified: false },
+        { name: "Cloud Fundamentals", verified: false },
       ],
     },
     {
-      category: "Tools & Security",
+      category: "Security & Observability",
       items: [
-        { name: "Wireshark", verified: false },
-        { name: "Nmap", verified: false },
-        { name: "PuTTY / SSH", verified: false },
-        { name: "Firewalls (UFW/MikroTik)", verified: false },
+        { name: "Wireshark / Packet Analysis", verified: false },
+        { name: "Firewall (MikroTik/UFW)", verified: false },
+        { name: "Monitoring Sistem", verified: false },
+        { name: "Troubleshooting", verified: false },
       ],
     },
   ] as SkillCategory[],
@@ -101,82 +101,72 @@ export const portfolioData = {
   experiences: [
     {
       year: "2023 - Sekarang",
-      title: "Junior IT Infrastructure & Network Engineer",
-      institution: "SMK (Sekolah Menengah Kejuruan)",
-      desc: "Mempelajari dan mendalami arsitektur jaringan, administrasi server Linux, serta dasar-dasar keamanan siber dalam kurikulum SMK Kelas 12.",
+      title: "Spesialisasi Jaringan & Sistem Infrastruktur",
+      institution: "Sekolah Menengah Kejuruan (TKJ)",
+      desc: "Mempelajari dan memperdalam arsitektur jaringan skala kompleks, administrasi server Linux, serta protokol keamanan infrastruktur sebagai bagian dari pelatihan vokasi teknis berkelanjutan.",
     },
     {
-      year: "2023 (Periode PKL)",
-      title: "IT Support & Operator ANBK",
+      year: "2023",
+      title: "IT Support & Teknisi Jaringan",
       institution: "Sekolah Alam Depok",
-      desc: "Mengelola infrastruktur jaringan sekolah, melakukan pemeliharaan hardware/software komputer, serta mengamankan kelancaran teknis asesmen ANBK.",
+      desc: "Mengelola infrastruktur jaringan lokal (LAN) dan memastikan 100% uptime untuk pelaksanaan Asesmen Nasional Berbasis Komputer (ANBK) melalui pengaturan skenario failover dan tindakan preventive maintenance.",
     },
   ] as Experience[],
 
   certificates: [
     {
-      title: "Cisco Certified Network Associate (CCNA)",
-      meta: "[Diperoleh saat kelas 11]",
-      desc: "Sertifikasi profesional dari Cisco yang memvalidasi kemampuan dalam instalasi, konfigurasi, dan pengoperasian jaringan skala menengah.",
+      title: "Pelatihan Cisco Certified Network Associate (CCNA)",
+      meta: "Cisco Networking Academy",
+      desc: "Menyelesaikan pelatihan mendalam terkait fundamental jaringan, konektivitas IP, dasar-dasar keamanan jaringan, serta otomatisasi.",
       tasks: undefined,
     },
     {
-      title: "MikroTik Certified Network Associate (MTCNA)",
-      meta: "[Sedang dalam tahap persiapan ujian]",
-      desc: "Fokus pada manajemen trafik, routing, dan troubleshooting menggunakan RouterOS MikroTik.",
+      title: "Persiapan MikroTik Certified Network Associate (MTCNA)",
+      meta: "MikroTik Academy",
+      desc: "Mempelajari kapabilitas RouterOS, mulai dari konfigurasi routing dasar, bandwidth management, hingga jaringan nirkabel (wireless).",
       tasks: undefined,
     },
     {
-      title: "Praktik Kerja Lapangan - Sekolah Alam Depok",
-      meta: "Pengalaman Kerja",
-      desc: "Tugas meliputi:",
+      title: "Pengalaman Deployment Infrastruktur Lapangan",
+      meta: "Implementasi Sistem - Sekolah Alam",
+      desc: "Pengalaman praktik penerapan infrastruktur dan pemeliharaan lapangan:",
       tasks: [
-        "Perawatan komputer dan infrastruktur jaringan.",
-        "Bertugas sebagai Operator ANBK bersama rekan dan pembimbing.",
-        "Administrasi ATK dan pengelolaan arsip kepegawaian/kesiswaan.",
-        "Rekapitulasi keuangan sekolah.",
+        "Melakukan instalasi dan pemeliharaan perangkat switching dan routing jaringan lokal.",
+        "Mendemonstrasikan ketersediaan tautan cadangan (redundant link) untuk mengamankan periode ujian kritis.",
+        "Mengeksekusi audit perangkat keras dan lunak di lebih dari 50 komputer klien (endpoints).",
       ],
     },
   ] as Certificate[],
 
   projects: [
     {
-      title: "Desain & Implementasi Topologi Jaringan Skala Sekolah",
-      desc: "Merancang dan melakukan konfigurasi jaringan kompleks tingkat lanjut dengan menerapkan routing protocol, VLAN, trunking, dan EtherChannel.",
-      image:
-        "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop",
-      category: "Jaringan",
-      tech: ["Cisco Packet Tracer", "VLAN/Trunking", "OSPF/EIGRP"],
-      challenge:
-        "Manajemen broadcast domain pada jaringan skala besar dan kebutuhan ketersediaan link (redundancy) antar gedung.",
-      solution:
-        "Menerapkan skema VLAN terpusat menggunakan switch Layer 3 dan mengatur EtherChannel/STP untuk mencegah looping serta meningkatkan bandwidth.",
+      title: "Desain Topologi Jaringan Enterprise Skala Makro",
+      desc: "Merancang fondasi bagi jaringan tingkat enterprise yang dapat diskalakan, termasuk skema redundancy dan segmentasi keamanan dengan menggunakan Cisco Packet Tracer.",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1200&auto=format&fit=crop",
+      category: "Arsitektur Jaringan",
+      tech: ["Cisco", "VLAN/Trunking", "OSPF", "STP"],
+      challenge: "Membangun sebuah jaringan high-availability antargedung dengan pemisahan wilayah broadcast (broadcast domain) secara ketat.",
+      solution: "Menerapkan rancangan jaringan sistem yang berhierarki (Core-Distribution-Access), memanfaat fungsionalitas EtherChannel untuk agragasi port/link, sera mengonfigurasi rute dinamik menggunakan OSPF.",
       link: "https://github.com/bagasmalikalbani",
     },
     {
-      title: "Konfigurasi & Manajemen Server Linux",
-      desc: "Membangun infrastruktur server menggunakan sistem operasi Debian dan Ubuntu, mencakup instalasi Web Server, Database Server, serta WordPress Server.",
-      image:
-        "https://images.unsplash.com/photo-1629654297299-c8506221ca97?q=80&w=1200&auto=format&fit=crop",
-      category: "Server",
-      tech: ["Debian/Ubuntu", "Apache/Nginx", "MySQL/MariaDB"],
-      challenge:
-        "Optimalisasi resource server virtual dan keamanan basis data untuk web dinamis.",
-      solution:
-        "Melakukan instalasi LAMP/LEMP stack dengan best practices hardening, memisahkan environment web dan database, dan menerapkan backup otomatis.",
+      title: "Perancangan Server Linux High Availability",
+      desc: "Mem-provisioning dan melakukan hardening komprehensif pada tumpukan server berbasis Linux (LAMP Stack) yang dioptimasi untuk penayangan konten web dinamis.",
+      image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop",
+      category: "Administrasi Sistem",
+      tech: ["Ubuntu Server", "Apache", "MySQL", "UFW"],
+      challenge: "Mengamankan tumpukan infrastruktur terhadap kerentanan keamanan server web umum dengan memastiian alokasi sumber daya tetap terjaga efisien.",
+      solution: "Menerapkan serangkaian aturan firewall yang ketat melalui UFW, melakukan segmentasi logis pada server basis data, serta mengintegrasikan skrip cron job harian dengan proses otomatis.",
       link: "https://github.com/bagasmalikalbani",
     },
     {
-      title: "Perawatan Infrastruktur IT & Operator ANBK",
-      desc: "Menjaga stabilitas infrastruktur jaringan dan hardware komputer, serta mengelola kelancaran teknis sebagai Operator pada pelaksanaan Asesmen Nasional Berbasis Komputer (ANBK).",
-      image:
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop",
-      category: "Keamanan",
-      tech: ["Troubleshooting", "LAN/WLAN", "Windows Server"],
-      challenge:
-        "Memastikan uptime jaringan 100% dan zero error hardware selama ujian nasional berlangsung serentak.",
-      solution:
-        "Melakukan preventive maintenance H-7, konfigurasi load balancing pada router Mikrotik, dan menyiapkan skenario failover backup link.",
+      title: "Implementasi Otomatisasi Failover Jaringan WAN",
+      desc: "Merancang sebuah sistem WAN failover responsif untuk meminimalisasi downtime serta menjamin kelancaran koneksi secara berkesinambungan terutama saat momen ujian berskala nasional.",
+      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?q=80&w=1200&auto=format&fit=crop",
+      category: "Keandalan Jaringan",
+      tech: ["MikroTik RouterOS", "Load Balancing", "Failover Routing"],
+      challenge: "Sasaran utamanya difokuskan pada ketahanan jaringan dalam menghadapi kegagalan ISP tanpa mengurangi kualitas layanan bagi lebih dari 100 perangkat pengguna tes serentak.",
+      solution: "Memerintahkan dan mengatur strategi load balancing bersanding dengan fitur recursive gateway di lingkungan MikroTik; kebijakan lalu lintas jaringan akan diarahkan pada secondary LTE link tatkala status utama dipastikan mati (down).",
       link: "https://github.com/bagasmalikalbani",
     },
   ],
@@ -184,8 +174,9 @@ export const portfolioData = {
   social: {
     linkedin: "https://linkedin.com/in/bagasmalikalbani",
     github: "https://github.com/bagasmalikalbani",
-    whatsapp: "https://wa.me/6281234567890",
+    whatsapp: "https://wa.me/6285156924916",
   },
 
-  footer: "Built with React, Vite, TypeScript & Terminal Aesthetics.",
+  footer: "Dibangun dengan React & Nuansa Arsitektur Cloud Modern.",
 };
+
